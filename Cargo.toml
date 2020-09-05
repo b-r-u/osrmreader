@@ -1,0 +1,7 @@
+[package]
+name = "osrmreader"
+version = "0.1.0"
+authors = ["Johannes Hofmann <mail@b-r-u.org>"]
+edition = "2018"
+
+[dependencies]
