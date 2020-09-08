@@ -5,3 +5,5 @@ authors = ["Johannes Hofmann <mail@b-r-u.org>"]
 edition = "2018"
 
 [dependencies]
+byteorder = "1.3"
+tar = "0.4"
