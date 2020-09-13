@@ -1,9 +1,9 @@
 /*!
-A fast reader for the *.osrm file format.
+A fast reader for the `*.osrm` file format.
 
-These files are produced by the OSRM-tool `osrm-extract` and encode the routing graph that is
-usually extracted from OpenStreetMap data.
-
+These files are used by the routing engine OSRM and are usually extracted from
+OpenStreetMap data with the tool `osrm-extract`. An `*.osrm` file encodes the
+routing graph as nodes and edges.
 
 ## Usage
 
