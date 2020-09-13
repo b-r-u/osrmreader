@@ -22,7 +22,7 @@ Here's a simple example that prints all nodes and edges:
 use osrmreader::{OsrmReader, Entry};
 
 fn main() -> Result<(), std::io::Error> {
-    let f = std::fs::File::open("tests/map.osrm")?;
+    let f = std::fs::File::open("tests/test.osrm")?;
     let mut reader = OsrmReader::new(f);
 
     for entry in reader.entries()? {
