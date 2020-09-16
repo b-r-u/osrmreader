@@ -84,7 +84,7 @@ pub struct Node {
     /// raw_latitude = latitude * 1000000
     pub raw_latitude: i32,
     /// A node ID, usually the OSM node ID of the original node.
-    pub node_id: i32,
+    pub node_id: i64,
 }
 
 impl Node {
@@ -137,7 +137,7 @@ impl<'a, R: 'a + Read> Iterator for OsrmNodes<'a, R> {
 
         let raw_longitude = LittleEndian::read_i32(&buf[0..4]);
         let raw_latitude = LittleEndian::read_i32(&buf[4..8]);
-        let node_id = LittleEndian::read_i32(&buf[8..12]);
+        let node_id = LittleEndian::read_i64(&buf[8..16]);
 
         Some(Ok(Node{
             raw_longitude,
