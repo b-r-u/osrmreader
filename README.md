@@ -7,6 +7,7 @@ These files are used by the routing engine OSRM and are usually extracted from
 OpenStreetMap data with the tool `osrm-extract`. An `*.osrm` file encodes the
 routing graph as nodes and edges.
 
+[![Build Status](https://travis-ci.org/b-r-u/osrmreader.svg?branch=master)](https://travis-ci.org/b-r-u/osrmreader)
 [![Crates.io](https://img.shields.io/crates/v/osrmreader.svg)](https://crates.io/crates/osrmreader)
 [![Documentation](https://docs.rs/osrmreader/badge.svg)](https://docs.rs/osrmreader)
 

@@ -13,6 +13,9 @@ categories = ["parser-implementations", "encoding", "science"]
 keywords = ["osrm", "parser", "routing", "openstreetmap", "osm"]
 license = "MIT OR Apache-2.0"
 
+[badges]
+travis-ci = { repository = "b-r-u/osrmreader" }
+
 [dependencies]
 byteorder = "1.3"
 tar = "0.4"
