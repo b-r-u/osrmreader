@@ -161,9 +161,9 @@ pub struct OsrmEdges<'a, R: Read> {
 #[derive(Clone, Debug)]
 pub struct Edge {
     /// Index of the first point of the edge.
-    pub source_node_index: i32,
+    pub source_node_index: u32,
     /// Index of the second point of the edge.
-    pub target_node_index: i32,
+    pub target_node_index: u32,
 }
 
 impl<'a, R: 'a + Read> OsrmEdges<'a, R> {
@@ -202,8 +202,8 @@ impl<'a, R: 'a + Read> Iterator for OsrmEdges<'a, R> {
         }
         self.current_edge_index += 1;
 
-        let source_node_index = LittleEndian::read_i32(&buf[0..4]);
-        let target_node_index = LittleEndian::read_i32(&buf[4..8]);
+        let source_node_index = LittleEndian::read_u32(&buf[0..4]);
+        let target_node_index = LittleEndian::read_u32(&buf[4..8]);
 
         Some(Ok(Edge{
             source_node_index,
