@@ -6,11 +6,10 @@ rust:
   - nightly
   - 1.45.2
 script:
-  - |
-      cargo build --verbose;
-      cargo test --verbose;
-      cargo doc --verbose;
-      cargo run --example basic;
-      cargo run --example osrm2geojson -- tests/test.osrm tests/test.geojson;
+  - cargo build --verbose
+  - cargo test --verbose
+  - cargo doc --verbose
+  - cargo run --example basic
+  - cargo run --example osrm2geojson -- tests/test.osrm tests/test.geojson
 env:
   - RUSTFLAGS="-D warnings"
